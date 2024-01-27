@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Простое приложение на JavaScript</title>
+</head>
+<body>
+    <select id="dropdown">
+        <option value="1">Элемент 1</option>
+        <option value="2">Элемент 2</option>
+        <option value="3">Элемент 3</option>
+    </select>
+    <br></br>
+    <input type="text" id="inputField">
+    <button onclick="saveChanges()">Save</button>
+
+    <script>
+        const dropdown = document.getElementById('dropdown');
+        const inputField = document.getElementById('inputField');
+
+        dropdown.addEventListener('change', function() {
+            inputField.value = dropdown.options[dropdown.selectedIndex].text;
+        });
+
+        function saveChanges() {
+            const selectedOption = dropdown.options[dropdown.selectedIndex];
+            const newOptionText = inputField.value.trim();
+            if (newOptionText !== '') {
+                selectedOption.text = newOptionText;
+            }
+        }
+    </script>
+</body>
+</html>
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="script.js"></script>
+    <title>first app</title>
+</head>
+<body>
+    <div class="dropmass">
+        <select class="drop_spisok">
+            <option>Элемент1</option>
+            <option>Элемент2</option>
+            <option>Элемент3</option>
+            <option>Элемент4</option>
+        </select>
+    </div>
+    <div class="input_button">
+        <input>
+        <button>Save</button>
+    </div>
+</body>
+</html> -->

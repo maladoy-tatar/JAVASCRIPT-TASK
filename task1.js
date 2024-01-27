@@ -29,3 +29,44 @@ let result_1 = new_task5.filter(function(item, index, array){
 console.log(result_1);
 let result_2 = new_task5.filter(item => item === 10);
 console.log(result_2);
+
+/*
+let loginUser = '4645hdjdfj';
+let passwordUser = 'hhfhr478487';
+let isCheckFirst, isCheckSecond;
+if ((loginUser === passwordUser) || (passwordUser.length <= 8)){
+    isCheckFirst = false;
+}
+else{
+    isCheckFirst = true;
+}
+for (let i=0; i < passwordUser.length; i++){
+    if (passwordUser[i] === passwordUser[i+1]){
+        isCheckSecond = false;
+        break;
+    }
+    else {
+        isCheckSecond = true;
+    }
+}
+console.log(isCheckFirst, isCheckSecond)
+
+function checkBackend(el1, el2) {
+    if (el1 === true && el2 === true){
+        return true;
+    }
+    else{
+        return false;
+    }
+}
+
+
+
+let isCheckUser = checkBackend(isCheckFirst, isCheckSecond);
+if (isCheckUser === true){
+    console.log("Авторизация выполнена");
+}
+else{
+    console.log("Авторизация не выполнена");
+}*/
+
